@@ -1,0 +1,8 @@
+direccion de link de sistema base
+
+https://appscweb.com/sistema-encuestas/login.php
+
+Las credenciales de acceso del usuario de tipo Administrativo son las siguientes:
+
+Usuario: hola@configuroweb.com
+Contraseña: 1234abcd..
