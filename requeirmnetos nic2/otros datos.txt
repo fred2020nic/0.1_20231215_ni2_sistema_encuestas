@@ -6,3 +6,5 @@ Las credenciales de acceso del usuario de tipo Administrativo son las siguientes
 
 Usuario: hola@configuroweb.com
 Contraseña: 1234abcd..
+
+140 dolares empieza 15-12-2023 son 30 dias
