@@ -17,6 +17,16 @@ $answers = $conn->query("SELECT distinct(user_id) from answers where survey_id =
 				</div>
 				<div class="card-body p-0 py-2">
 					<div class="container-fluid">
+
+						<!-- Inicio Datos del Colaborar-->
+						
+						<p>Nombre: <b><?php echo $stitle ?></b></p>
+						<p>Apellido: <b><?php echo $stitle ?></b></p>
+						<p>Cotacto: <b><?php echo $stitle ?></b></p>
+						<p>Email: <b><?php echo $stitle ?></b></p>
+
+						<!-- Fin Datos del Colaborar-->
+
 						<p>Título: <b><?php echo $stitle ?></b></p>
 						<p class="mb-0">Descripción:</p>
 						<small><?php echo $description; ?></small>

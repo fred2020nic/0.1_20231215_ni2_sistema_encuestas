@@ -56,9 +56,16 @@ while ($row = $answers->fetch_assoc()) {
 		<div class="col-md-8">
 			<div class="card card-outline card-success">
 				<div class="card-header">
+					
 					<h3 class="card-title"><b>Reporte Encuesta</b></h3>
-					<div class="card-tools">
+					<div class="row">
+					<div class="card-tools col-md-9">
+						<button class="btn btn-flat btn-sm bg-gradient-success" type="button" id="print"><i class="fa fa-file-excel-o"></i> Exportar a Excel</button>
+					</div>
+					<hr>
+					<div class="card-tools col-md-3">
 						<button class="btn btn-flat btn-sm bg-gradient-success" type="button" id="print"><i class="fa fa-print"></i> Imprimir</button>
+					</div>
 					</div>
 				</div>
 				<div class="card-body ui-sortable">

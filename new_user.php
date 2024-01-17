@@ -12,21 +12,36 @@
 							<label for="" class="control-label">Nombre</label>
 							<input type="text" name="firstname" class="form-control form-control-sm" required value="<?php echo isset($firstname) ? $firstname : '' ?>">
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="" class="control-label">Segundo Nombre</label>
 							<input type="text" name="middlename" class="form-control form-control-sm" value="<?php echo isset($middlename) ? $middlename : '' ?>">
-						</div>
+						</div> -->
 						<div class="form-group">
 							<label for="" class="control-label">Apellido</label>
 							<input type="text" name="lastname" class="form-control form-control-sm" required value="<?php echo isset($lastname) ? $lastname : '' ?>">
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="" class="control-label">Contacto</label>
 							<input type="text" name="contact" class="form-control form-control-sm" required value="<?php echo isset($contact) ? $contact : '' ?>">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Dirección</label>
 							<textarea name="address" id="" cols="30" rows="4" class="form-control" required><?php echo isset($address) ? $address : '' ?></textarea>
+						</div> -->
+						<!-- Nuwevso campos -->
+						<div class="form-group">
+							<label for="" class="control-label">Area</label>
+							<input type="text" name="middlename" class="form-control form-control-sm" value="<?php echo isset($middlename) ? $middlename : '' ?>">
+						</div> 
+
+						 <div class="form-group">
+							<label for="" class="control-label">Puesto</label>
+							<input type="text" name="middlename" class="form-control form-control-sm" value="<?php echo isset($middlename) ? $middlename : '' ?>">
+						</div> 
+
+						 <div class="form-group">
+							<label for="" class="control-label">Pais</label>
+							<input type="text" name="middlename" class="form-control form-control-sm" value="<?php echo isset($middlename) ? $middlename : '' ?>">
 						</div>
 					</div>
 					<div class="col-md-6">

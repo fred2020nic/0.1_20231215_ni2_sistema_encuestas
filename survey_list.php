@@ -10,10 +10,10 @@
 			<table class="table tabe-hover table-bordered" id="list">
 				<colgroup>
 					<col width="5%">
-					<col width="20%">
-					<col width="20%">
-					<col width="20%">
-					<col width="20%">
+					<col width="15%">
+					<col width="15%">
+					<col width="15%">
+					<col width="15%">
 					<col width="15%">
 				</colgroup>
 				<thead>
@@ -57,6 +57,52 @@
 									<button type="button" class="btn btn-danger btn-flat delete_survey" data-id="<?php echo $row['id'] ?>">
 										<i class="fas fa-trash"></i>
 									</button>
+
+									<!-- Button trigger modal 
+										Asginar Usario a ecuesnta
+									-->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+										<i class="fas fa-user-plus"></i>
+										Asignar
+									</button>
+
+									<!-- Modal -->
+									<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<?php
+												$mysqli = new mysqli('localhost', 'root', '', 'sisen');
+												?>
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Asginar Usuario</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<label for="paises" class="sr-only">Paises:</label>
+													<select class="form-control">
+														<option value="">Seleccione:</option>
+														<?php
+														$query = $mysqli->query("SELECT * FROM users");
+														while ($valores = mysqli_fetch_array($query)) {
+															echo '<option value="' . $valores[id] . '">' . $valores[firstname] . '</option>';
+														}
+														?>
+													</select>
+												</div>
+												<div class="modal-footer">
+													
+													<button type="button" class="btn btn-primary">Asignar</button>
+
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
 								</div>
 							</td>
 						</tr>
@@ -66,6 +112,8 @@
 		</div>
 	</div>
 </div>
+
+
 <script>
 	$(document).ready(function() {
 		$('#list').dataTable()
@@ -93,4 +141,28 @@
 			}
 		})
 	}
+
+
+	function asignar($id) {
+		// start_load()
+		// $.ajax({
+		// 	url: 'ajax.php?action=delete_survey',
+		// 	method: 'POST',
+		// 	data: {
+		// 		id: $id
+		// 	},
+		// 	success: function(resp) {
+		// 		if (resp == 1) {
+		// 			alert_toast("Datos eliminados correctamente", 'success')
+		// 			setTimeout(function() {
+		// 				location.reload()
+		// 			}, 1500)
+
+		// 		}
+		// 	}
+		// })
+
+		alert(´ < h1 > hola mundo < /h1>´);
+
+		}
 </script>
