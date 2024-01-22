@@ -61,13 +61,20 @@
 									<!-- Button trigger modal 
 										Asginar Usario a ecuesnta
 									-->
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+									<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="<?php echo $row['id'] ?>">
 										<i class="fas fa-user-plus"></i>
 										Asignar
-									</button>
+									</button> -->
+
+									<a href="./index.php?page=asig_survey&id=<?php echo $row['id'] ?>" class="btn btn-primary btn-flat">
+										<i class="fas fa-user-plus"></i>
+									</a>
+
+
+
 
 									<!-- Modal -->
-									<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 										<div class="modal-dialog">
 											<div class="modal-content">
 												<?php
@@ -80,6 +87,8 @@
 														<span aria-hidden="true">&times;</span>
 													</button>
 												</div>
+
+
 												<div class="modal-body">
 													<label for="paises" class="sr-only">Paises:</label>
 													<select class="form-control">
@@ -91,6 +100,7 @@
 														}
 														?>
 													</select>
+													<span>  <?php echo $row['id'] ?> </span>
 												</div>
 												<div class="modal-footer">
 													
@@ -100,7 +110,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 
 
 								</div>

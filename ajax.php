@@ -33,6 +33,13 @@ if($action == "save_survey"){
 	if($save)
 		echo $save;
 }
+
+if($action == ""){
+	$save = $crud->asig_survey();
+	if($save)
+		echo $save;
+}
+
 if($action == "delete_survey"){
 	$delete = $crud->delete_survey();
 	if($delete)

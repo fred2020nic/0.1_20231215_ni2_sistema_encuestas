@@ -68,6 +68,12 @@
                     <p>Lista</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="./index.php?page=asig_list" class="nav-link nav-survey_list tree-item">
+                    <i class="fas fa-angle-right nav-icon"></i>
+                    <p>Encuestas Asignadas</p>
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="nav-item">

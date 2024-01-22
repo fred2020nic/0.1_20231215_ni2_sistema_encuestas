@@ -31,17 +31,17 @@
 						<!-- Nuwevso campos -->
 						<div class="form-group">
 							<label for="" class="control-label">Area</label>
-							<input type="text" name="middlename" class="form-control form-control-sm" value="<?php echo isset($middlename) ? $middlename : '' ?>">
+							<input type="text" name="area" class="form-control form-control-sm" value="<?php echo isset($area) ? $area : '' ?>">
 						</div> 
 
 						 <div class="form-group">
 							<label for="" class="control-label">Puesto</label>
-							<input type="text" name="middlename" class="form-control form-control-sm" value="<?php echo isset($middlename) ? $middlename : '' ?>">
+							<input type="text" name="puesto" class="form-control form-control-sm" value="<?php echo isset($puesto) ? $puesto : '' ?>">
 						</div> 
 
 						 <div class="form-group">
 							<label for="" class="control-label">Pais</label>
-							<input type="text" name="middlename" class="form-control form-control-sm" value="<?php echo isset($middlename) ? $middlename : '' ?>">
+							<input type="text" name="pais" class="form-control form-control-sm" value="<?php echo isset($pais) ? $pais : '' ?>">
 						</div>
 					</div>
 					<div class="col-md-6">

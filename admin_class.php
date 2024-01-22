@@ -143,6 +143,35 @@ Class Action {
 		if($save)
 			return 1;
 	}
+
+
+
+	/*Asignar Usuario */
+
+
+	function asig_survey(){
+		extract($_POST);
+		$data = "";
+		foreach($_POST as $k => $v){
+			if(!in_array($k, array('id')) && !is_numeric($k)){
+				if(empty($data)){
+					$data .= " $k='$v' ";
+				}else{
+					$data .= ", $k='$v' ";
+				}
+			}
+		}
+		if(empty($id)){
+			$save = $this->db->query("INSERT INTO  survey_asig set $data");
+		}else{
+			$save = $this->db->query("UPDATE  survey_asig set $data where id = $id");
+		}
+
+		if($save)
+			return 1;
+	}
+
+
 	function delete_survey(){
 		extract($_POST);
 		$delete = $this->db->query("DELETE FROM survey_set where id = ".$id);

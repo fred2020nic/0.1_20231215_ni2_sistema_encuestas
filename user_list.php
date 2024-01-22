@@ -15,6 +15,10 @@
 						<th>Contacto</th>
 						<th>Rol</th>
 						<th>Correo</th>
+						<th>Area</th>
+						<th>Puesto</th>
+						<th>Pais</th>
+
 						<th>Acción</th>
 					</tr>
 				</thead>
@@ -31,6 +35,10 @@
 							<td><b><?php echo $row['contact'] ?></b></td>
 							<td><b><?php echo $type[$row['type']] ?></b></td>
 							<td><b><?php echo $row['email'] ?></b></td>
+							<td><b><?php echo $row['area'] ?></b></td>
+							<td><b><?php echo $row['puesto'] ?></b></td>
+							<td><b><?php echo $row['pais'] ?></b></td>
+
 							<td class="text-center">
 								<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 									Acción
