@@ -38,7 +38,7 @@ if (!isset($conn)) {
                                         // Iterar a través de los resultados de la fila
                                         while ($valores = $result->fetch_assoc()) {
                                             // Asegúrate de escapar de la salida para evitar XSS
-                                            echo '<option value="' . htmlspecialchars($valores['id']) . '">' . htmlspecialchars($valores['firstname']) . '</option>';
+                                            echo '<option value="' . htmlspecialchars($valores['id']) . '">' . htmlspecialchars($valores['firstname']) . ' ' . htmlspecialchars($valores['lastname']) . '</option>';
                                         }
                                     }
                                     $stmt->close();

@@ -1,9 +1,9 @@
 <?php include 'db_connect.php' ?>
 <?php
-$answers = $conn->query("SELECT distinct(survey_id) from answers where user_id ={$_SESSION['login_id']}");
+$answers = $conn->query("SELECT distinct(id_asig) from survey_asig where id_asig ={$_SESSION['login_id']}");
 $ans = array();
 while ($row = $answers->fetch_assoc()) {
-	$ans[$row['survey_id']] = 1;
+	$ans[$row['id_asig']] = 1;
 }
 ?>
 <div class="col-lg-12">
@@ -21,7 +21,7 @@ while ($row = $answers->fetch_assoc()) {
 	</div>
 	<div class="row">
 		<?php
-		$survey = $conn->query("SELECT * FROM survey_set where '" . date('Y-m-d') . "' between date(start_date) and date(end_date) order by rand() ");
+		$survey = $conn->query("SELECT a.id as id,	 e.title as title, e.description as description FROM survey_set e INNER JOIN survey_asig a ON e.id = a.id_survey INNER JOIN users u ON u.id = a.id_asig WHERE u.id = {$_SESSION['login_id']}");
 		while ($row = $survey->fetch_assoc()) :
 		?>
 			<div class="col-md-3 py-1 px-1 survey-item">
