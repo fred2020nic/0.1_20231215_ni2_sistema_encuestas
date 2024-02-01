@@ -20,10 +20,10 @@ $answers = $conn->query("SELECT distinct(user_id) from answers where survey_id =
 
 						<!-- Inicio Datos del Colaborar-->
 						
-						<p>Nombre: <b><?php echo $stitle ?></b></p>
+						<!-- <p>Nombre: <b><?php echo $stitle ?></b></p>
 						<p>Apellido: <b><?php echo $stitle ?></b></p>
 						<p>Cotacto: <b><?php echo $stitle ?></b></p>
-						<p>Email: <b><?php echo $stitle ?></b></p>
+						<p>Email: <b><?php echo $stitle ?></b></p> -->
 
 						<!-- Fin Datos del Colaborar-->
 
@@ -36,6 +36,8 @@ $answers = $conn->query("SELECT distinct(user_id) from answers where survey_id =
 
 					</div>
 					<hr class="border-primary">
+				
+					
 				</div>
 			</div>
 		</div>
@@ -99,7 +101,10 @@ $answers = $conn->query("SELECT distinct(user_id) from answers where survey_id =
 			</div>
 		</div>
 	</div>
+	
 </div>
+
+
 <script>
 	$(document).ready(function() {
 		$('.ui-sortable').sortable({

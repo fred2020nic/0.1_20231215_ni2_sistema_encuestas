@@ -21,7 +21,7 @@ while ($row = $answers->fetch_assoc()) {
 	</div>
 	<div class="row">
 		<?php
-		$survey = $conn->query("SELECT a.id as id,	 e.title as title, e.description as description FROM survey_set e INNER JOIN survey_asig a ON e.id = a.id_survey INNER JOIN users u ON u.id = a.id_asig WHERE u.id = {$_SESSION['login_id']}");
+		$survey = $conn->query("SELECT a.id as id,	 e.title as title, e.description as description , a.id_survey as ida FROM survey_set e INNER JOIN survey_asig a ON e.id = a.id_survey INNER JOIN users u ON u.id = a.id_asig WHERE u.id = {$_SESSION['login_id']}");
 		while ($row = $survey->fetch_assoc()) :
 		?>
 			<div class="col-md-3 py-1 px-1 survey-item">
@@ -41,7 +41,7 @@ while ($row = $answers->fetch_assoc()) {
 							<hr class="border-primary">
 							<div class="d-flex justify-content-center w-100 text-center">
 								<?php if (!isset($ans[$row['id']])) : ?>
-									<a href="index.php?page=answer_survey&id=<?php echo $row['id'] ?>" class="btn btn-sm bg-gradient-primary"><i class="fa fa-pen-square"></i> Tomar Encuesta</a>
+									<a href="index.php?page=answer_survey&id=<?php echo $row['ida'] ?>" class="btn btn-sm bg-gradient-primary"><i class="fa fa-pen-square"></i> Tomar Encuesta</a>
 								<?php else : ?>
 									<p class="text-primary border-top border-primary">Finalizado</p>
 								<?php endif; ?>

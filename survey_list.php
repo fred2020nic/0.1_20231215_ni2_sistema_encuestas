@@ -70,6 +70,10 @@
 										<i class="fas fa-user-plus"></i>
 									</a>
 
+									<a href="./index.php?page=user_asig&id=<?php echo $row['id'] ?>" class="btn btn-primary btn-flat">
+										<i class="fas fa-user-plus"></i>
+									</a>
+
 
 
 
