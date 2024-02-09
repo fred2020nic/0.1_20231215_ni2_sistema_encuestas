@@ -55,13 +55,13 @@ foreach ($qry as $k => $v) {
 											</div>
 										<?php endforeach; ?>
 										<?php elseif ($row['type'] == 'check_opt') :
-										foreach (json_decode($row['frm_option']) as $k => $v) :
-										?>
+										foreach (json_decode($row['frm_option']) as $k => $v) : ?>
 											<div class="icheck-primary">
-												<input type="checkbox" id="option_<?php echo $k ?>" name="answer[<?php echo $row['id'] ?>][]" value="<?php echo $k ?>">
+												<input type="radio" id="option_<?php echo $k ?>" name="answer[<?php echo $row['id'] ?>][]" value="<?php echo $v ?>">
 												<label for="option_<?php echo $k ?>"><?php echo $v ?></label>
 											</div>
 										<?php endforeach; ?>
+
 									<?php else : ?>
 										<div class="form-group">
 											<textarea name="answer[<?php echo $row['id'] ?>]" id="" cols="30" rows="4" class="form-control" placeholder="Escribe algo aquí..."></textarea>

@@ -82,11 +82,25 @@
 
 <script>
 	$(document).ready(function() {
-		$('#list').dataTable()
-		$('.delete_survey').click(function() {
-			_conf("Deseas eliminar esta encuesta?", "delete_survey", [$(this).attr('data-id')])
-		})
-	})
+   
+    $('#list').DataTable({
+        dom: 'Bfrtip', 
+        buttons: [
+            {
+                extend: 'excelHtml5', 
+                title: 'Exportar Datos', 
+                text: 'Exportar a Excel', 
+                className: 'btn btn-success' 
+            }
+        ],
+       
+    });
+
+  
+    $('.delete_survey').click(function() {
+        _conf("Deseas eliminar esta encuesta?", "delete_survey", [$(this).attr('data-id')])
+    });
+});
 
 	function delete_survey($id) {
 		start_load()
@@ -109,26 +123,7 @@
 	}
 
 
-	function asignar($id) {
-		// start_load()
-		// $.ajax({
-		// 	url: 'ajax.php?action=delete_survey',
-		// 	method: 'POST',
-		// 	data: {
-		// 		id: $id
-		// 	},
-		// 	success: function(resp) {
-		// 		if (resp == 1) {
-		// 			alert_toast("Datos eliminados correctamente", 'success')
-		// 			setTimeout(function() {
-		// 				location.reload()
-		// 			}, 1500)
 
-		// 		}
-		// 	}
-		// })
-
-		alert(´ < h1 > hola mundo < /h1>´);
-
-		}
+		
 </script>
+
